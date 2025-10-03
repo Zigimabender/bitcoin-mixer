@@ -8,4 +8,4 @@ $loader = new PackageLoader\PackageLoader();
 $loader->load('bitcoin-address-validator');
 use Kielabokkie\Bitcoin\AddressValidator;
 
-echo AddressValidator::isValid($_GET['address']) ? 1 : 0;
+echo (new AddressValidator)->isValid($_GET['address']) ? 1 : 0;
